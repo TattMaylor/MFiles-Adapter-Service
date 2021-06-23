@@ -1,0 +1,12 @@
+C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\bin\Release\MFilesAdapterService.exe.config
+C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\bin\Release\MFilesAdapterService.exe
+C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\bin\Release\MFilesAdapterService.pdb
+C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\bin\Release\Newtonsoft.Json.dll
+C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\bin\Release\Newtonsoft.Json.xml
+C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\obj\Release\MFilesAdapterService.csprojAssemblyReference.cache
+C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\obj\Release\MFilesAdapterService.csproj.ResolveComReference.cache
+C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\obj\Release\MFilesAdapterService.ProjectInstaller.resources
+C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\obj\Release\MFilesAdapterService.csproj.GenerateResource.cache
+C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\obj\Release\MFilesAdapterService.csproj.CopyComplete
+C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\obj\Release\MFilesAdapterService.exe
+C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\obj\Release\MFilesAdapterService.pdb
