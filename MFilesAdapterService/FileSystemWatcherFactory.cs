@@ -68,12 +68,13 @@
                 NotifyFilter = NotifyFilters.FileName,
                 Filter = watcherConfig.Filter,
                 IncludeSubdirectories = watcherConfig.IncludeSubdirectories,
-                EnableRaisingEvents = watcherConfig.EnableRaisingEvents
+                EnableRaisingEvents = watcherConfig.EnableRaisingEvents,
+                InternalBufferSize = (64 * 1024) // maximum buffer size is 64kb
             };
 
             watcherConfig.Watcher.Created += OnCreated;
             watcherConfig.Watcher.Deleted += OnDeleted;
-            watcherConfig.Watcher.Error   += OnError;
+            watcherConfig.Watcher.Error += OnError;
 
             watcherList.Add(watcherConfig);
 
@@ -95,7 +96,7 @@
 
             watcher.Created += OnCreatedConfig;
             watcher.Deleted += OnDeletedConfig;
-            watcher.Error   += OnErrorConfig;
+            watcher.Error += OnErrorConfig;
 
             Log($"Created watcher for JSON configurations");
         }
@@ -127,7 +128,7 @@
         /// <param name="e">The FileSystemWatcher's event arguments</param>
         private void OnCreated(object sender, FileSystemEventArgs e)
         {
-            Log($"Created: {e.FullPath}");
+            //Log($"Created: {e.FullPath}");
 
             try
             {
@@ -150,8 +151,7 @@
         /// </summary>
         /// <param name="sender">The FileSystemWatcher object</param>
         /// <param name="e">The FileSystemWatcher's event arguments</param>
-        private void OnDeleted(object sender, FileSystemEventArgs e) =>
-            Log($"Deleted: {e.FullPath}");
+        private void OnDeleted(object sender, FileSystemEventArgs e) { }
 
         /// <summary>
         /// Triggered when an error involving a FileSystemWatcher occurs
@@ -159,7 +159,7 @@
         /// <param name="sender">The FileSystemWatcher object</param>
         /// <param name="e">The FileSystemWatcher's event arguments</param>
         private void OnError(object sender, ErrorEventArgs e) =>
-            Log($"Error: {e.ToString()}");
+            Log($"Error: {e.GetException().Message}");
 
         /// <summary>
         ///  When a configuration JSON is added to the configuration directory, system will attempt to create a new FileSystemWatcher
@@ -224,7 +224,7 @@
         /// <param name="watcherConfig">An object containing information from an XML configuration file</param>
         /// <returns>True if correct format, else false</returns>
         private bool IsCorrectFormat(FileSystemWatcherObject watcherConfig)
-        {            
+        {
             foreach (PropertyInfo property in watcherConfig.GetType().GetProperties().Skip(2))
             {
                 if (property.GetValue(watcherConfig) == null)

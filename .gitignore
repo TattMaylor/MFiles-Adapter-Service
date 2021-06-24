@@ -5,3 +5,5 @@ MFilesAdapterService/App.config
 MFilesAdapterService/config
 MFilesAdapterService/debug
 packages
+MFilesAdapterService/bin
+MFilesAdapterService/obj
