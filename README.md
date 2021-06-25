@@ -40,6 +40,7 @@ MFAS utilizes a specified configuration directory where JSON files are loaded to
 3. Create a `config` folder in `mfiles-adapter-service/MFilesAdapterService` (optional location)
 4. Create a `debug` folder in `mfiles-adapter-service/MFilesAdapterService` (optional location)
 5. Populate the key-value pairs in `App.config`
+6. Build the project
 
 ### Installing the Service
 > Note: Click the footnotes to view example commands
