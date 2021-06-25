@@ -1,5 +1,39 @@
-# Setting Up Local Environment
-> Note: Use the installation on Portal as a reference for things like `App.config` contents
+# About
+The MFiles Adapter Service (MFAS) was designed as a lightweight solution to effortlessly transfer documents into MFiles via MFiles' COM API.
+
+The service is capable of watching multiple directories simultaneously through the use of FileSystemWatchers.
+
+When a document that meets a specified criteria enters a watched folder, MFAS will automatically transfer it into MFiles.
+<br>
+
+# How To Use
+
+### Watching a Directory
+MFAS utilizes a specified configuration directory where JSON files are loaded to create FileSystemWatchers. The configuration directory is set in the App.config file. JSON templates can be added and removed while MFAS is running, the service will automatically dispose of any removed watcher data or add new watcher data when a template leaves or enters the folder.
+
+### Watcher Template (JSON)
+    {
+		"projectname": "KCS Test Project",
+		"filepath": "C:\\the\\directory\\to\\watch",
+		"filter": "*.pdf",
+		"includesubdirectories": "true",
+		"enableraisingevents": "true",
+		"fileclass": 0
+    }
+
+- `projectname`: The name of the project or system associated with the files
+- `filepath`: The directory to be monitored for changes
+- `filter`: The file extensions to monitor
+- `includesubdirectories`: Whether or not to check directories within the filepath
+- `enableraisingevents`: Whether or not to raise FileSystemWatcher events
+- `fileclass`: The type of document being uploaded (check MFiles for this integer)
+
+<br>
+
+# Testing and Development
+
+### Setting Up Local Environment
+> Note: The created files are ignored by source control to prevent users from accidentally pushing their test configurations
 
 1. Clone the repo 
 2. Create an `App.config` file in `mfiles-adapter-service/MFilesAdapterService`
@@ -7,7 +41,7 @@
 4. Create a `debug` folder in `mfiles-adapter-service/MFilesAdapterService` (optional location)
 5. Populate the key-value pairs in `App.config`
 
-# Installing the Service
+### Installing the Service
 > Note: Click the footnotes to view example commands
 
 You can install the service by calling `installutil.exe` on `MFilesAdapterService.exe`. [^1]
@@ -16,9 +50,9 @@ You can uninstall the service by including `/u` before the executible file. [^2]
 
 For quick reinstallations during debugging, I recommend creating a batch script to run the uninstall and install commands back to back.
 
-You can verify that the service has been installed / uninstalled by opening the <ins>[Services Manager]("https://www.thewindowsclub.com/open-windows-services")</ins>.
+You can verify that the service has been installed / uninstalled by opening the <a href="https://www.thewindowsclub.com/open-windows-services" title="Hobbit lifestyles">Services Manager</a>.
 
-# Debugging the Service
+### Debugging the Service
 > Note: Click the footnotes to view specific instructions
 
 1. Build the project using Debug configuration
