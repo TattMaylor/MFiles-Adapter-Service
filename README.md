@@ -40,6 +40,18 @@ MFAS utilizes a specified configuration directory where JSON files are loaded to
 3. Create a `config` folder in `mfiles-adapter-service/MFilesAdapterService` (optional location)
 4. Create a `debug` folder in `mfiles-adapter-service/MFilesAdapterService` (optional location)
 5. Populate the key-value pairs in `App.config`
+```
+[App.config]
+
+	<add key="ConfigFilePath" value="" />
+	<add key="LogFilePath" value="" />
+	<add key="MFNetworkAddress" value="" />
+	<add key="MFVaultGuid" value="" />
+	<add key="MFVaultGuidDebug" value="" />
+	<add key="ServiceUsername" value="" />
+	<add key="ServicePassword" value="" />
+	<add key="UserDomain" value="" />
+```
 6. Build the project
 
 ### Installing the Service
