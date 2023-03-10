@@ -13,7 +13,7 @@ MFAS utilizes a specified configuration directory where JSON files are loaded to
 
 ### Watcher Template (JSON)
     {
-		"projectname": "KCS Test Project",
+		"projectname": "Test Project",
 		"filepath": "C:\\the\\directory\\to\\watch",
 		"filter": "*.pdf",
 		"includesubdirectories": "true",
@@ -66,7 +66,7 @@ Attaching to the process will allow you to use breakpoints in Visual Studio whil
 <br>
 
 # Footnotes
-[^1]: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\installutil.exe C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\bin\Debug\MFilesAdapterService.exe`
-[^2]: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\installutil.exe /u C:\Users\mttaylor\Documents\Projects\MFilesAdapterService\MFilesAdapterService\bin\Debug\MFilesAdapterService.exe`
+[^1]: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\installutil.exe C:\Path\To\Project\bin\Debug\MFilesAdapterService.exe`
+[^2]: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\installutil.exe /u C:\Path\To\Project\bin\Debug\MFilesAdapterService.exe`
 [^3]: If the process doesn't start automatically, you can manually start, stop, and restart it in the Service Manager
 [^4]: In Visual Studio, go to `Debug` > `Attach to Process` > Select the `MFilesAdapterService` process
