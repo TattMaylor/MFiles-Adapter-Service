@@ -1,9 +1,9 @@
 # About
-The MFiles Adapter Service (MFAS) was designed as a lightweight solution to effortlessly transfer documents into MFiles via MFiles' COM API.
+The M-Files Adapter Service (MFAS) was designed as a lightweight solution to effortlessly transfer documents into M-Files via M-Files' COM API.
 
 The service is capable of watching multiple directories simultaneously through the use of FileSystemWatchers.
 
-When a document that meets a specified criteria enters a watched folder, MFAS will automatically transfer it into MFiles.
+When a document that meets a specified criteria enters a watched folder, MFAS will automatically transfer it into M-Files.
 <br>
 
 # How To Use
@@ -26,7 +26,7 @@ MFAS utilizes a specified configuration directory where JSON files are loaded to
 - `filter`: The file extensions to monitor
 - `includesubdirectories`: Whether or not to check directories within the filepath
 - `enableraisingevents`: Whether or not to raise FileSystemWatcher events
-- `fileclass`: The type of document being uploaded (check MFiles for this integer)
+- `fileclass`: The type of document being uploaded (check M-Files for this integer)
 
 <br>
 
